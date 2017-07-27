@@ -3,10 +3,6 @@ package com.edu.ui.activity;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.edu.base.BaseActivity;
 import com.edu.base.BaseFragment;
@@ -89,30 +85,13 @@ public class HomeActivity extends BaseActivity {
 
     }
 
-    /**
-     * @description: 设置添加Tab
-     */
-    private void setTabs(TabLayout tabLayout, LayoutInflater inflater, int[] tabTitles, int[] tabImgs){
-        for (int i = 0; i < tabImgs.length; i++) {
-            TabLayout.Tab tab = tabLayout.newTab();
-            View view = inflater.inflate(R.layout.tab_find_item,null);
-            tab.setCustomView(view);
 
-            TextView tvTitle = (TextView)view.findViewById(R.id.tv_tab);
-            tvTitle.setText(tabTitles[i]);
-            ImageView imgTab = (ImageView) view.findViewById(R.id.img_tab);
-            imgTab.setImageResource(tabImgs[i]);
-            tabLayout.addTab(tab);
-
-        }
-    }
 
 
     @Override
     public void setListener() {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
 
     }
 }
