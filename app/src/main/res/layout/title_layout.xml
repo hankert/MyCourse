@@ -11,9 +11,9 @@
         android:background="@color/line" />
     <ImageView
         android:id="@+id/img_back"
-        android:layout_width="@dimen/width_32"
         android:layout_height="@dimen/width_32"
-        android:src="@mipmap/title_back"
+        android:layout_width="@dimen/width_32"
+        android:src="@drawable/title_back"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/width_8"/>
 
