@@ -25,8 +25,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:canLoop="true" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 
